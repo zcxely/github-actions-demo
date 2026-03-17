@@ -1,0 +1,15 @@
+name: Build Docker Image
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo auschecken
+        uses: actions/checkout@v3
+
+      - name: Docker Image bauen
+        run: docker build -t github-actions-demo:latest .
