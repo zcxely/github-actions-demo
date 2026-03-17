@@ -13,3 +13,7 @@ jobs:
 
       - name: Docker Image bauen
         run: docker build -t github-actions-demo:latest .
+
+    steps:
+      - name: Docker Images anzeigen
+        run: docker images
