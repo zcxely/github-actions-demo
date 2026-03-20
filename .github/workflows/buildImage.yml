@@ -1,7 +1,9 @@
 name: Build Docker Image
 
 on:
-  workflow_dispatch: 
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -9,7 +11,7 @@ jobs:
 
     steps:
       - name: Repo auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Docker Image bauen
         run: docker build -t github-actions-demo:latest .
