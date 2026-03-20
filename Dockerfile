@@ -1,3 +1,3 @@
 FROM alpine
 
-CMD ["echo", "Hello World"]
+CMD ["sh", "echo Hello World && sleep 60"]
